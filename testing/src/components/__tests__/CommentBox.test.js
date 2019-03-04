@@ -2,12 +2,17 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import CommentBox from 'components/CommentBox';
+import Root from 'Root';
 
 describe('The Comment Box Component', () => {
   let component;
 
   beforeEach(() => {
-    component = mount(<CommentBox />);
+    component = mount(
+    <Root>
+      <CommentBox />
+    </Root>  
+    );
   });
 
   afterEach(() => {
