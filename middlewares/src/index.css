@@ -1,0 +1,11 @@
+.navbar {
+  margin: 0 0 2rem;
+}
+
+textarea {
+  resize: none;
+}
+
+.fetch-comments {
+  margin: 1rem 0 0 0;
+}
