@@ -20,7 +20,6 @@ const localLogin = new LocalStrategy(localOptions, (email, password, done) => {
   });
 });
 
-
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromHeader('authorization'),
   secretOrKey: config.secret
