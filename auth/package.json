@@ -1,0 +1,11 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:start": "mongod --dbpath ./data/db"
+  },
+  "author": "",
+  "license": "ISC"
+}
