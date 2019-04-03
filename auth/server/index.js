@@ -9,7 +9,9 @@ const app = express();
 const router = require('./router');
 
 mongoose.set('useCreateIndex', true);
-mongoose.connect('mongodb://localhost/auth', { useNewUrlParser: true });
+
+const uri = 'mongodb://localhost:27017/auth'
+mongoose.connect(uri, { useNewUrlParser: true });
 
 app.use(morgan('combined'));
 app.use(cors());
