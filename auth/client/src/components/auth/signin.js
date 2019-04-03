@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form'
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { signup } from '../../actions';
+import { signin } from '../../actions';
 
-class Signup extends Component {
+class Signin extends Component {
 
   onSubmit = (formProps) => {
-    this.props.signup(formProps, () => {
+    this.props.signin(formProps, () => {
       this.props.history.push('/feature')
     });
 
@@ -18,7 +18,7 @@ class Signup extends Component {
 
     return (
       <form className="form" onSubmit={handleSubmit(this.onSubmit)}>
-        <h2>Sign up for an Account</h2>
+        <h2>Please Sign In</h2>
         <fieldset className="form-group">
           <label htmlFor="email">Email</label>
           <Field
@@ -29,9 +29,9 @@ class Signup extends Component {
             autoComplete="none"
           />
         </fieldset>
-        <fieldset className="form-group">
+        <fieldset class="form-group">
           <label htmlFor="password">Password</label>
-          <Field
+          <Field 
             className="form-control"
             name="password"
             type="password"
@@ -55,6 +55,6 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-  reduxForm({ form: 'signup' }),
-  connect(mapStateToProps, { signup })
-)(Signup);
+  reduxForm({ form: 'signin' }),
+  connect(mapStateToProps, { signin })
+)(Signin);

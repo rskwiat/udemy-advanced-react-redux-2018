@@ -1,5 +1,9 @@
 import React from 'react';
 
 export default () => {
-  return <h3>Welcome</h3>
+  return (
+    <div className="app">
+      <h3>Welcome</h3>
+    </div>
+  )
 };

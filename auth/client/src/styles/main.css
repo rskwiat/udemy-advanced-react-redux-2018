@@ -1,0 +1,19 @@
+.navbar-nav {
+  flex-direction: row;
+  width: 100%;
+}
+
+.nav-item:nth-child(2){
+  margin: 0 1rem 0 auto;
+}
+
+.app,
+.form {
+  margin: 2rem auto;
+  max-width: 600px;
+  position: relative;
+}
+
+.alert {
+  margin: 1rem 0;
+}
